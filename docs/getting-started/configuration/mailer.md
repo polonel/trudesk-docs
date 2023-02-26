@@ -11,7 +11,7 @@ Settings related to sending & receiving email.
 The new email templates is currently in beta still under active devlopment. Some aspects of the feature may change in a future release
 :::
 
-The new email templates utilize a visual email editor through a thrid-party component [GrapesJS](https://grapesjs.com/). GrapesJS is still in active development. Currently two templates are avaliable with the new template format.
+The new email templates utilize a visual email editor through a third-party component [GrapesJS](https://grapesjs.com/). GrapesJS is still in active development. Currently two templates are available with the new template format.
 
 | Template | Description |
 | --- | --- |
@@ -19,12 +19,12 @@ The new email templates utilize a visual email editor through a thrid-party comp
 | Password Reset | Email sent when a user requests a password reset on the Login Page |
 
 ## Mailer
-SMTP settings to connect Trudesk Mailer to a provider for sending email. 
+SMTP settings to connect Trudesk Mailer to a provider for sending emails. 
 Not all email providers allow the same connection methods, Trudesk has been tested with the follow email providers.
 - **GMail**
   - Requires Google Account to [Allow Less Secure Apps](https://support.google.com/accounts/answer/6010255?hl=en)
 - **Office 365**
-- **Exchang Server**
+- **Exchange Server**
 - **Outlook.com**
 - **Zoho**
 
@@ -52,7 +52,7 @@ The **Mail Check** process polls an IMAP inbox for new emails and ***tries*** to
 | Password | --- | Password of the IMAP mailbox to poll. |
 | Allow Self Signed Certificate | `disabled` | If the IMAP server utilize a self-signed cert, bypass validation checks. |
 | Polling Interval | `10` | How often to poll the server for new messages in minutes.
-| Create Account | `disabled` | If the user does not a trudesk account one will be created using their FROM email address |
-| Delete Message | `disabled` | Once the message has been scanned, trudesk will delete the message from the imbox. <br />***Note: Trudesk will remove the message regardless if it was successfully processed. This will be addressed.*** |
+| Create Account | `disabled` | If the user does not have a Trudesk account one will be created using their FROM email address |
+| Delete Message | `disabled` | Once the message has been scanned, Trudesk will delete the message from the inbox. <br />***Note: Trudesk will remove the message regardless if it was successfully processed. This will be addressed.*** |
 | Default Ticket Type | `Issue` | All mail processed through the Mail Check process will have this ticket type. |
 | Default Ticket Priority | `Normal` | All mail processed through the Mail Check will have this ticket priority |
