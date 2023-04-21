@@ -4,9 +4,14 @@ title: Permissions
 ---
 
 ## Roles
-Roles define the role of `Admin`, `Agents`, and `Users`. Custom roles can also be created if required.
+Define the role of `Admin`, `Agents`, and `Users`. Custom roles can also be created if required.
 
 ## Permissions
+Configure the permissions for each role. 
+:::note Admin Override
+Some permissions will be overriden by **Admins** even if disabled.
+:::
+
 ### Tickets
 | Perm | Description |
 | --- | --- |
@@ -31,10 +36,10 @@ Roles define the role of `Admin`, `Agents`, and `Users`. Custom roles can also b
 ### Accounts
 | Perm | Description |
 | --- | --- |
-| Create | Allow the creation of Tickets |
-| View | Allow the viewing of Tickets in which the account has team/group access |
-| Update | Allow updating of Tickets in which the account has team/group access  |
-| Delete | Allow deleting of Tickets in which the account has team/group access  | 
+| Create | Allow the creation of Accounts |
+| View | Allow the viewing of Accounts in which the account has team/group access |
+| Update | Allow updating of Accounts in which the account has team/group access  |
+| Delete | Allow deleting of Accounts in which the account has team/group access  | 
 | --- | --- |
 | Import | **Requires `Create`** Allows importing of accounts from `JSON`, `CSV`, & `LDAP` |
 
