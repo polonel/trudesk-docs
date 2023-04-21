@@ -53,6 +53,6 @@ The **Mail Check** process polls an IMAP inbox for new emails and ***tries*** to
 | Allow Self Signed Certificate | `disabled` | If the IMAP server utilize a self-signed cert, bypass validation checks. |
 | Polling Interval | `10` | How often to poll the server for new messages in minutes.
 | Create Account | `disabled` | If the user does not a trudesk account one will be created using their FROM email address |
-| Delete Message | `disabled` | Once the message has been scanned, trudesk will delete the message from the imbox. <br />***Note: Trudesk will remove the message regardless if it was successfully processed. This will be addressed.*** |
+| Delete Message | `disabled` | Once the message has been scanned, trudesk will delete the message from the inbox. <br />***Note: Trudesk will remove the message regardless if it was successfully processed. This will be addressed.*** |
 | Default Ticket Type | `Issue` | All mail processed through the Mail Check process will have this ticket type. |
 | Default Ticket Priority | `Normal` | All mail processed through the Mail Check will have this ticket priority |
