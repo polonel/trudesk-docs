@@ -4,33 +4,40 @@ title: Docker
 ---
 
 # Docker Deployment
+
 Trudesk requires the following addtional docker containers in order to run. Please see the documentation related to those images for additional configuration options you may require.
 
 - [Mongo:5.0](https://hub.docker.com/_/mongo)
 - [ElasticSearch:8.0.0](https://hub.docker.com/_/elasticsearch)
 
 ## Deploy with Docker-Compose
-Within the Github repo, a sample `docker-compose.yml` file is included. We can quickly stand up a demo site with docker. 
+
+Within the Github repo, a sample `docker-compose.yml` file is included. We can quickly stand up a demo site with docker.
 
 **Download `docker-compose.yml` from Github repo**
+
 ```bash
 wget https://raw.githubusercontent.com/polonel/trudesk/master/docker-compose.yml
 ```
+
 **Stand Up Docker Stack**
+
 ```bash
 docker-compose up
 ```
 
 Three containers are deployed; **MongoDB**, **ElasticSearch**, **Trudesk**. Once all containers are online, access the Trudesk instance at [http://localhost:8118](http://localhost:8118)
 
-*Note: By default MongoDB and Elastic search ports are exposed to the host*
+_Note: By default MongoDB and Elastic search ports are exposed to the host and should be used for testing purposes only, **NOT FOR PRODUCTION**_
 
 ## Manual Deployment
+
 :::note Example Configuration
 The following Docker configuration is presented as an example. Your configuration may require addtional options depending on your deployment
 :::
 
 ### Setup Storage Directories
+
 Create directories to store the data for the containers we are going to deploy. Data directories are needed for **MongDB**, **ElasticSearch**, and **Trudesk**
 
 ```bash
@@ -43,6 +50,7 @@ sudo mkdir -p /data/trudesk/backups & \
 ```
 
 ### MongoDB 5
+
 Run the deployment command to start a **MongoDB 5** container with storage path of `/data/db`. Please refer to the [MongoDB Docker Documentation](https://hub.docker.com/_/mongo) for additional configuration options.
 
 ```bash
@@ -54,6 +62,7 @@ docker run --name mongodb \
 ```
 
 ### ElasticSearch 8
+
 Run the deployment command to start a **ElasticSearch 8** container with a storage path of `/data/es/data`. Please refer to the [ElasticSearch Docker Documentation](https://hub.docker.com/_/elasticsearch) for additional configuration options.
 
 ```bash
@@ -70,9 +79,10 @@ docker run --name elasticsearch \
 -d elasticsearch:8.0.0
 ```
 
-
 ### Trudesk
+
 Pull the latest release of Trudesk from Docker.
+
 ```bash
 sudo docker pull polonel/trudesk:latest
 ```
